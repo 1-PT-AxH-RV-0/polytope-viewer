@@ -261,10 +261,7 @@ export function _initializeRenderer() {
     canvas: this.canvas
   });
 
-  const maxSize = Math.min(
-    Math.min(window.innerWidth, window.innerHeight),
-    720
-  );
+  const maxSize = Math.min(window.innerWidth, window.innerHeight);
   this.canvas.style.width = `${maxSize}px`;
   this.canvas.style.height = `${maxSize}px`;
   this.progCon.style.left = `${maxSize / 2 + 8}px`;
@@ -285,10 +282,7 @@ export function _initializeRenderer() {
   this.composer.addPass(this.bloomPass);
 
   window.addEventListener('resize', () => {
-    const newMaxSize = Math.min(
-      Math.min(window.innerWidth, window.innerHeight),
-      720
-    );
+    const newMaxSize = Math.min(window.innerWidth, window.innerHeight);
 
     this.canvas.style.width = `${newMaxSize}px`;
     this.canvas.style.height = `${newMaxSize}px`;
